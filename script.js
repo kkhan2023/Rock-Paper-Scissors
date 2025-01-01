@@ -1,5 +1,3 @@
-// Write code so computer will randomly return one 'rock', 'paper' or 'scissors'
-
 function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3); //generate a random number from 0 to 2
   if (randomNumber === 0) {
@@ -11,24 +9,49 @@ function getComputerChoice() {
   }
 }
 
-// write the code so that the human will return one of the valid choices based on user input
+//re-worked code to switches instead of if statements using arrays
 
-function getHumanChoice() {
-  const userInput = prompt("Pick rock, paper, or scissors"); // Input by user
-  const arrayOfChoices = ["Rock", "Paper", "Scissors"]; // Users 3 choices
-  const lowercaseInput = userInput.toLowerCase(); // Initialize users input to be case sensitive
-
-  if (lowercaseInput === arrayOfChoices[0].toLowerCase()) {
-    return "Rock";
-  } else if (lowercaseInput === arrayOfChoices[1].toLowerCase()) {
-    return "Paper";
-  } else if (lowercaseInput === arrayOfChoices[2].toLowerCase()) {
-    return "Scissors";
-  } else {
-    alert("Invalid input, please try again");
-    return getHumanChoice();
+function getHumanChoice(choice) {
+  switch (choice) {
+    case "rock":
+      return "Rock";
+    case "paper":
+      return "Paper";
+    case "scissors":
+      return "Scissors";
   }
 }
+
+// Get the buttons from the HTML
+
+const rockButton = document.getElementById("rock");
+const paperButton = document.getElementById("paper");
+const scissorsButton = document.getElementById("scissors");
+
+// Add event listeners to each button
+
+rockButton.addEventListener("click", () => {
+  const humanChoice = getHumanChoice("rock");
+  if (humanChoice) {
+    console.log("Human chose:", humanChoice);
+  }
+});
+
+paperButton.addEventListener("click", () => {
+  const humanChoice = getHumanChoice("paper");
+  if (humanChoice) {
+    // Proceed with the game logic
+    console.log("Human chose:", humanChoice);
+  }
+});
+
+scissorsButton.addEventListener("click", () => {
+  const humanChoice = getHumanChoice("scissors");
+  if (humanChoice) {
+    // Proceed with the game logic
+    console.log("Human chose:", humanChoice);
+  }
+});
 
 function playGame() {
   let humanScore = 0;
