@@ -1,10 +1,19 @@
 # Rock-Paper-Scissors
 
-Project: Rock Paper Scissors
+Project 2 : Rock Paper Scissors - With UI JS DOM manipulation
 
-Objective: create a console based rock paper scissors game that takes into account:
+Objective: create a user interface for the Rock, Paper, Scissors game using HTML, CSS & JavaScript
 
-- computer choice
-- human choice
-- conditionals based on the output of the computer and human choice
-- game of 5 rounds in a loop with a record of scores.
+functions required:
+
+- getComputerChoice
+- hasPlayerWonTheRound
+- getRoundResults
+- showResults
+- resetGame
+
+Project outcome:
+
+- Implemented Event Listeners
+- Created functions with multiple conditional statements.
+- Worked with array of HTML ID's & Classes for styling & DOM manipulation.

@@ -5,37 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors JS</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="./script.js"></script>
   </head>
   <body>
-    <div class="container">
-      <h1>Rock Paper Scissors</h1>
-      <h2>Play 5 rounds and see who wins!</h2>
+    <div id="intro">
+      <h1>Rock, Paper, Scissors</h1>
+      <p>First to 5 points wins the game, are you ready to play?</p>
     </div>
-    <div class="container-1">
-      <div class="userInput">
-        <h3>Pick your weapon!</h3>
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+    <div id="game">
+      <div id="stats">
+        <span class="stat"
+          >Your score: <strong><span id="playerScore">0</span></strong></span
+        >
+        <span class="stat"
+          >Computer score:
+          <strong><span id="computerScore">0</span></strong></span
+        >
       </div>
-      <div class="scores">
-        <h3>Scores</h3>
-        <table>
-          <tr>
-            <th>Player</th>
-            <th>Score</th>
-          </tr>
-          <tr>
-            <td>You</td>
-            <td id="playerScore">0</td>
-          </tr>
-          <tr>
-            <td>Computer</td>
-            <td id="computerScore">0</td>
-          </tr>
-        </table>
+      <div id="controls">
+        <button class="btn" id="reset-game-btn">Play again?</button>
+        <div class="buttons-container">
+          <h2>Choose an option</h2>
+          <button id="rockButton">Rock</button>
+          <button id="paperButton">Paper</button>
+          <button id="scissorsButton">Scissors</button>
+        </div>
       </div>
+      <div id="text"></div>
+      <div id="winner-msg"></div>
     </div>
+    <script src="javascript.js"></script>
   </body>
 </html>
-<script src="./script.js"></script>
